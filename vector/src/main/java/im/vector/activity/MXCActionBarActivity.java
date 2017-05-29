@@ -46,6 +46,7 @@ import im.vector.Matrix;
 import im.vector.R;
 import im.vector.adapters.DrawerAdapter;
 import im.vector.services.EventStreamService;
+import im.vector.util.ThemeUtils;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -87,7 +88,7 @@ public class MXCActionBarActivity extends ActionBarActivity {
             });
         }
     }
-    
+
     /**
      * Return the used MXSession from an intent.
      * @param intent
@@ -167,6 +168,7 @@ public class MXCActionBarActivity extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        ThemeUtils.activitySetTheme(this);
         VectorApp.setCurrentActivity(null);
         Matrix.removeSessionErrorListener(this);
 

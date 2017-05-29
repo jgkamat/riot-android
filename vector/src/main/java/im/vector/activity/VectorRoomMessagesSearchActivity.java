@@ -29,6 +29,7 @@ import org.matrix.androidsdk.fragments.MatrixMessageListFragment;
 
 import im.vector.R;
 import im.vector.fragments.VectorSearchMessagesListFragment;
+import im.vector.util.ThemeUtils;
 
 /**
  * Displays a room messages search
@@ -59,6 +60,7 @@ public class VectorRoomMessagesSearchActivity extends VectorBaseSearchActivity {
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_room_messages_search);
 
         Intent intent = getIntent();

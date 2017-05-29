@@ -44,6 +44,7 @@ import org.matrix.androidsdk.rest.model.login.LoginFlow;
 import im.vector.LoginHandler;
 import im.vector.Matrix;
 import im.vector.R;
+import im.vector.util.ThemeUtils;
 
 import java.util.List;
 
@@ -102,6 +103,7 @@ public class LoginActivity extends MXCActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_login);
 
         // resume the application

@@ -59,6 +59,7 @@ import java.util.Collection;
 import im.vector.Matrix;
 import im.vector.R;
 import im.vector.util.ResourceUtils;
+import im.vector.util.ThemeUtils;
 import im.vector.util.VectorUtils;
 
 public class VectorRoomCreationActivity extends MXCActionBarActivity {
@@ -96,6 +97,7 @@ public class VectorRoomCreationActivity extends MXCActionBarActivity {
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
 
         setContentView(R.layout.activity_vector_room_creation);
 

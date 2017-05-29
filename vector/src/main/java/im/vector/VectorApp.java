@@ -17,10 +17,12 @@
 package im.vector;
 import android.app.Activity;
 import android.app.Application;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -37,6 +39,7 @@ import im.vector.ga.Analytics;
 import im.vector.gcm.GcmRegistrationManager;
 import im.vector.services.EventStreamService;
 import im.vector.util.LogUtilities;
+import im.vector.util.ThemeUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -199,7 +202,17 @@ public class VectorApp extends Application {
 
         this.mIsCallingInBackground = false;
         this.mIsInBackground = false;
+        this.setTheme();
     }
+
+    private void setTheme() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        String mode = sp.getString(getResources().getString(R.string.settings_theme), null);
+        if (mode != null) {
+            ThemeUtils.setTheme(mode);
+        }
+    }
+
 
     static private Activity mCurrentActivity = null;
     public static void setCurrentActivity(Activity activity) {
@@ -268,4 +281,3 @@ public class VectorApp extends Application {
         mSavedPickerImagePreview = aSavedCameraImagePreview;
     }
 }
-

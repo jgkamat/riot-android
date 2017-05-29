@@ -28,6 +28,7 @@ import im.vector.Matrix;
 import im.vector.R;
 import im.vector.adapters.ParticipantAdapterItem;
 import im.vector.adapters.VectorAddParticipantsAdapter;
+import im.vector.util.ThemeUtils;
 
 /**
  * This class provides a way to search other user to invite them in a dedicated room
@@ -59,6 +60,7 @@ public class VectorRoomInviteMembersActivity extends VectorBaseSearchActivity {
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
 
         Intent intent = getIntent();
 

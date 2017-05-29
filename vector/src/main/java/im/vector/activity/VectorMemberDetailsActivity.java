@@ -43,6 +43,7 @@ import org.matrix.androidsdk.rest.model.User;
 import im.vector.R;
 import im.vector.adapters.MemberDetailsAdapter;
 import im.vector.adapters.MemberDetailsAdapter.AdapterMemberActionItems;
+import im.vector.util.ThemeUtils;
 import im.vector.util.VectorUtils;
 
 import java.util.ArrayList;
@@ -457,6 +458,7 @@ public class VectorMemberDetailsActivity extends MXCActionBarActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
 
         if (CommonActivityUtils.shouldRestartApp()) {
             Log.e(LOG_TAG, "Restart the application");

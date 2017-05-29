@@ -35,6 +35,7 @@ import org.matrix.androidsdk.rest.model.MatrixError;
 import org.matrix.androidsdk.rest.model.Message;
 import im.vector.Matrix;
 import im.vector.R;
+import im.vector.util.ThemeUtils;
 
 public class LockScreenActivity extends Activity { // do NOT extend from UC*Activity, we do not want to login on this screen!
     public static final String EXTRA_SENDER_NAME = "extra_sender_name";
@@ -51,6 +52,7 @@ public class LockScreenActivity extends Activity { // do NOT extend from UC*Acti
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
 
         // kill any running alert
         if (null != mLockScreenActivity) {

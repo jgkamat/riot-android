@@ -84,6 +84,7 @@ import im.vector.fragments.ImageSizeSelectionDialogFragment;
 import im.vector.services.EventStreamService;
 import im.vector.util.NotificationUtils;
 import im.vector.util.ResourceUtils;
+import im.vector.util.ThemeUtils;
 import im.vector.util.VectorUtils;
 
 import java.io.File;
@@ -328,6 +329,7 @@ public class VectorRoomActivity extends MXCActionBarActivity implements VectorMe
         }
 
         super.onCreate(savedInstanceState);
+		ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_room);
 
         // bind the widgets of the room header view. The room header view is displayed by
@@ -2117,5 +2119,3 @@ public class VectorRoomActivity extends MXCActionBarActivity implements VectorMe
             vectorActivityRoomView.getViewTreeObserver().removeOnGlobalLayoutListener(mKeyboardListener);
     }
 }
-
-

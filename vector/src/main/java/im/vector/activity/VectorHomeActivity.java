@@ -45,6 +45,7 @@ import im.vector.VectorApp;
 import im.vector.fragments.VectorRecentsListFragment;
 import im.vector.services.EventStreamService;
 import im.vector.util.RageShake;
+import im.vector.util.ThemeUtils;
 import im.vector.util.VectorUtils;
 
 import java.util.ArrayList;
@@ -95,6 +96,7 @@ public class VectorHomeActivity extends AppCompatActivity implements VectorRecen
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_home);
 
         // use a toolbar instead of the actionbar

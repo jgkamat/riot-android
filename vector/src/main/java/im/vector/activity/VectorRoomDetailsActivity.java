@@ -42,6 +42,7 @@ import im.vector.VectorApp;
 import im.vector.fragments.VectorRoomDetailsMembersFragment;
 import im.vector.fragments.VectorRoomSettingsFragment;
 import im.vector.fragments.VectorSearchRoomFilesListFragment;
+import im.vector.util.ThemeUtils;
 
 /**
  * This class implements the room details screen, using a tab UI pattern.
@@ -104,6 +105,7 @@ public class VectorRoomDetailsActivity extends MXCActionBarActivity implements T
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
 
         Intent intent = getIntent();
 

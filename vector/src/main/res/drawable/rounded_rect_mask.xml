@@ -17,7 +17,7 @@
                 android:topRightRadius="10dp" />
             <stroke
                 android:width="6dp"
-                android:color="@color/room_background" />
+                android:color="?attr/room_background" />
         </shape>
     </item>
 

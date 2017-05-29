@@ -28,6 +28,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
@@ -60,6 +61,7 @@ import im.vector.R;
 import im.vector.activity.VectorMediasPickerActivity;
 import im.vector.preference.UserAvatarPreference;
 import im.vector.util.ResourceUtils;
+import im.vector.util.ThemeUtils;
 import im.vector.util.VectorUtils;
 
 public class VectorSettingsPreferencesFragment extends PreferenceFragment {
@@ -184,6 +186,25 @@ public class VectorSettingsPreferencesFragment extends PreferenceFragment {
                     return false;
                 }
             });
+        }
+
+        // Themes
+        ListPreference themePreference = (ListPreference) findPreference("Theme");
+        if (null != themePreference) {
+            themePreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    @Override
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        if (newValue instanceof String) {
+                            ThemeUtils.setTheme((String)newValue);
+                        }
+                        // Display a message to the user
+                        CharSequence text = "You may need to restart the app to see these changes.";
+                        int duration = Toast.LENGTH_LONG;
+                        Toast toast = Toast.makeText(getActivity().getApplicationContext(), text, duration);
+                        toast.show();
+                        return true;
+                    }
+                });
         }
 
         // clear cache

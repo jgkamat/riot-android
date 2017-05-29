@@ -56,6 +56,14 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/settings_other" >
+        <ListPreference
+            android:defaultValue="light"
+            android:entries="@array/theme_readables"
+            android:entryValues="@array/theme_codes"
+            android:key="@string/settings_theme"
+            android:summary="%s"
+            android:title="@string/settings_theme"></ListPreference>
+
 
         <im.vector.preference.VectorCustomActionEditTextPreference
             android:title="@string/settings_version"

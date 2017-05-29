@@ -40,6 +40,7 @@ import org.matrix.androidsdk.util.BingRulesManager;
 import im.vector.Matrix;
 import im.vector.R;
 import im.vector.adapters.NotificationsRulesAdapter;
+import im.vector.util.ThemeUtils;
 
 import java.util.HashMap;
 
@@ -146,6 +147,7 @@ public class NotificationSettingsActivity extends MXCActionBarActivity {
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_notification_settings);
 
         Intent intent = getIntent();

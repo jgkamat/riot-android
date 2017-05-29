@@ -50,6 +50,7 @@ import im.vector.VectorApp;
 import im.vector.Matrix;
 import im.vector.R;
 import im.vector.services.EventStreamService;
+import im.vector.util.ThemeUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -302,6 +303,7 @@ public class CallViewActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_callview);
 
         instance = this;

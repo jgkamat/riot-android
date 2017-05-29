@@ -24,6 +24,7 @@ import org.matrix.androidsdk.MXSession;
 import org.matrix.androidsdk.rest.model.PublicRoom;
 import im.vector.R;
 import im.vector.fragments.VectorPublicRoomsListFragment;
+import im.vector.util.ThemeUtils;
 
 import java.util.ArrayList;
 
@@ -46,6 +47,7 @@ public class VectorPublicRoomsActivity extends MXCActionBarActivity {
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_public_rooms);
 
         Intent intent = getIntent();

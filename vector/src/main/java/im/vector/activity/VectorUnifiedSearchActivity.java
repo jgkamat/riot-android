@@ -37,6 +37,7 @@ import im.vector.fragments.VectorSearchPeopleListFragment;
 import im.vector.fragments.VectorSearchRoomsFilesListFragment;
 import im.vector.fragments.VectorSearchRoomsListFragment;
 import im.vector.fragments.VectorSearchMessagesListFragment;
+import im.vector.util.ThemeUtils;
 
 
 /**
@@ -85,6 +86,7 @@ public class VectorUnifiedSearchActivity extends VectorBaseSearchActivity implem
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_unified_search);
 
         // the session should be passed in parameter

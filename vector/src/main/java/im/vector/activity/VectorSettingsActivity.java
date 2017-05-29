@@ -23,6 +23,7 @@ import org.matrix.androidsdk.MXSession;
 import im.vector.Matrix;
 import im.vector.R;
 import im.vector.fragments.VectorSettingsPreferencesFragment;
+import im.vector.util.ThemeUtils;
 
 public class VectorSettingsActivity extends MXCActionBarActivity {
     // session
@@ -34,6 +35,7 @@ public class VectorSettingsActivity extends MXCActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
 
         Intent intent = getIntent();
         mSession = getSession(intent);

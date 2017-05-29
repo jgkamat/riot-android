@@ -15,7 +15,7 @@
             android:id="@+id/layout_avatar"
             android:layout_width="@dimen/invitation_member_list_avatar_size"
             android:layout_height="@dimen/invitation_member_list_avatar_size"
-            android:background="@color/room_background"
+            android:background="?attr/room_background"
             android:padding="4dp">
 
             <include layout="@layout/round_avatar"

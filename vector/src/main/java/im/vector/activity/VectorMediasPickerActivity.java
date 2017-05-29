@@ -33,6 +33,7 @@ import android.os.Bundle;
 
 import im.vector.R;
 import im.vector.VectorApp;
+import im.vector.util.ThemeUtils;
 import im.vector.view.RecentMediaLayout;
 
 import android.hardware.Camera;
@@ -152,6 +153,7 @@ public class VectorMediasPickerActivity extends MXCActionBarActivity implements 
         }
 
         super.onCreate(savedInstanceState);
+        ThemeUtils.activitySetTheme(this);
         setContentView(R.layout.activity_vector_medias_picker);
         mCameraId = Camera.CameraInfo.CAMERA_FACING_BACK;
 

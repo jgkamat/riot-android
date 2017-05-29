@@ -3,6 +3,16 @@
     <string name="resouces_language">en</string>
     <string name="resouces_country">UK</string>
 
+    <!-- Themes -->
+    <string-array name="theme_readables">
+        <item>Light Theme</item>
+        <item>Dark Theme</item>
+    </string-array>
+    <string-array name="theme_codes">
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
     <!-- titles -->
     <string name="app_name">Vector</string>
     <string name="title_activity_home">Messages</string>
@@ -496,6 +506,8 @@
     <string name="settings_user_settings">User settings</string>
     <string name="settings_notifications">Notifications</string>
     <string name="settings_other">Other</string>
+
+    <string name="settings_theme">Theme</string>
 
     <string name="settings_change_password">Change password</string>
     <string name="settings_old_password">old password</string>
